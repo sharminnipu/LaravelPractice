@@ -15,40 +15,22 @@
 index file we can start like that
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('home');
-});
+});  */
+
+
+/* we use controller for routing */
+
+Route::get('/','SiteController@home');
 
 /* we can route another page like this */
 
-Route::get('/contact',function()
-    {
-        return view('contact');
+Route::get('/contact','SiteController@contact');
 
-    }
-);
+Route::post('/contact','SiteController@contactHandellar');
 
-
-/* we can route with parameter like this */
-
-Route::get('/post/{id}',function($id)
-    {
-        return " you passed: " . $id ;
-
-    }
-);
-
-/* we can route with parameter  or without parameter like this */
-
-Route::get('/post/{id?}',function($id=null)
-    {
-        if($id)
-            return " you passed: " . $id ;
-        else
-             return "No parameter";
-
-    }
-);
+Route::get('/post/{id}','SiteController@post');
 
 
 
