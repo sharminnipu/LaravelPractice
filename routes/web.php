@@ -23,6 +23,7 @@ index file we can start like that
 /* we use controller for routing */
 
 Route::get('/','SiteController@home');
+Route::get('/about','SiteController@about');
 
 /* we can route another page like this */
 
