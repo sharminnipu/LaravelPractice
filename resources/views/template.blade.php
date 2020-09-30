@@ -20,8 +20,7 @@
      <a href="">ITEM3 |</a>
      <a href="">ITEM4 |</a>
      <a href="">ITEM5</a>
-    
-
+     
     
      </nav>
      <section class="main_content">
