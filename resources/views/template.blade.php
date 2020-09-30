@@ -24,6 +24,17 @@
     
      </nav>
      <section class="main_content">
+         @if (count($errors)>0)
+          <ul>
+              @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+                   
+              @endforeach
+          </ul>
+             
+         @endif
+
+
          @yield('content')
      </section>
      <footer> &copyright2020 all reverse</footer>

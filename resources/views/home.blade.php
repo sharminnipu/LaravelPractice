@@ -3,8 +3,14 @@
    HomePage
 @endsection
 @section('content')
-  <h1>hello guyz!!Welcome to you serise!!</h1>
-  <p>Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services. It is considered one of the Big Tech technology companies, 
-    alongside Amazon, Google, Microsoft, and Facebook</p>
+  <h1>hello guyz!! Fill Up the form!!</h1>
+<form action="{{url('/form')}}" method="POST">
+  @csrf
+  <input type="text" name="name" placeholder="Name"> <br><br>
+  <input type="text" name="email" placeholder="E-mail"><br><br>
+  <button type="submit">Submit</button>
+</form>
+ 
+  
 
 @endsection
